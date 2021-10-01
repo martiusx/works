@@ -1,0 +1,319 @@
+/* main*/
+
+.main-content {
+    width: 65%;
+    min-height: 100%;
+    font-size: 1.6rem;
+    line-height: 30px;
+    padding: 100px 375px 100px 95px;
+    transform: translateX(-200%);
+
+}
+
+.main-content.active {
+    animation: main-content-active .6s forwards;
+}
+
+@keyframes main-content-active {
+    0% {}
+
+    50% {
+        transform: translateX(2%);
+    }
+
+    75% {
+        transform: translateX(-7%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.main-content h2 {
+    font-size: 4rem;
+    line-height: 70px;
+}
+
+.main-content ul {
+    margin-top: 30px;
+    margin-left: 20px;
+    list-style: square;
+}
+
+.circle {
+    width: 35%;
+    height: 85%;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    right: 5%;
+    top: calc(50% - 85%/2);
+    transform: translateX(150%);
+}
+
+.circle.active {
+    animation: circle-active .6s forwards;
+}
+
+
+@keyframes circle-active {
+    0% {}
+
+    50% {
+        transform: translateX(-2%);
+    }
+
+    75% {
+        transform: translateX(7%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*pages*/
+
+.pages:nth-of-type(1).active {
+    animation: Y-active .6s forwards;
+}
+
+.pages:nth-of-type(2).active {
+    animation: Y-active .6s 1s forwards;
+}
+
+@keyframes Y-active {
+    0% {}
+
+    50% {
+        transform: translateY(-2%);
+    }
+
+    75% {
+        transform: translateY(7%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.in-page1,
+.in-page2 {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.575);
+    transition: .4s;
+}
+
+.page h3 {
+    z-index: 1;
+    font-size: 2rem;
+    transition: .4s;
+}
+
+.page:hover .in-page1 {
+    transform: translate(-100%, -100%);
+}
+
+.page:hover .in-page2 {
+    transform: translate(100%, 100%);
+}
+
+.page:hover h3 {
+    opacity: 0;
+}
+
+
+/*information*/
+
+.information.active {
+    animation: Y-active .6s 1s forwards;
+}
+
+.on-information h2 {
+    font-size: 3.5rem;
+    line-height: 40px;
+    position: absolute;
+    top: -500%;
+    color: rgb(194, 194, 194);
+}
+
+.on-information p {
+    font-size: 3.2rem;
+    position: absolute;
+    opacity: 0.8;
+    top: -450%;
+    color: rgb(155, 155, 155);
+
+}
+
+.on-information span {
+    font-size: 1.7rem;
+    position: absolute;
+    top: -400%;
+    margin-right: 60%;
+}
+
+/*statics*/
+
+.stats-container {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    place-items: end center;
+}
+
+.stats {
+    width: 12%;
+    background-color: rgb(136, 0, 0);
+    margin-left: 30px;
+    padding-top: 45px;
+    font-size: 2.4rem;
+    text-transform: lowercase;
+    font-weight: bold;
+}
+
+
+.stats span {
+    font-size: 1.5rem;
+}
+
+
+.stats.s1 {
+    height: 230px;
+}
+
+.stats.s2 {
+    height: 390px;
+}
+
+.stats.s3 {
+    height: 300px;
+}
+
+.stats.s4 {
+    height: 350px;
+}
+
+.stats.s5 {
+    height: 450px;
+}
+
+.stats i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+/*publications*/
+
+.publisz-box h1 {
+    font-size: 3.2rem;
+    position: absolute;
+    top: -150px;
+    margin-left: 23.5%;
+}
+
+.publisz-box {
+    position: absolute;
+    display: flex;
+    height: 300px;
+    right: -960px;
+    bottom: 7%;
+    overflow-x: hidden;
+
+}
+
+.publisz {
+    width: 300px;
+    margin-left: 25px;
+    font-size: 1.7rem;
+    transition: .4s;
+}
+
+.publisz h2 {
+    text-align: center;
+    height: 60px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid red;
+
+}
+
+
+.publisz button {
+    color: white;
+    background: rgb(155, 6, 6);
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    bottom: 50px;
+    font-size: 1.8rem;
+}
+
+.publisz button i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.publisz button:hover {
+    background: none;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.publisz-switch {
+    position: absolute;
+    bottom: 30px;
+    right: 27%;
+}
+
+.switch {
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    float: left;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.switch.media {
+    display: none;
+}
+
+.switch.media2 {
+    display: none;
+}
+
+
+/*footer*/
+footer {
+    width: 100%;
+    height: 200px;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+footer li {
+    float: left;
+    list-style: none;
+    margin-left: 3vw;
+    margin-bottom: 20px;
+}

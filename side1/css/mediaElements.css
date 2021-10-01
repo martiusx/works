@@ -1,0 +1,51 @@
+.nav-media-button {
+    color: red;
+    font-size: 5rem;
+    position: fixed;
+    right: 25px;
+    top: 25px;
+    z-index: 10;
+}
+
+.nav-media-button:hover {
+    cursor: pointer;
+}
+
+.nav-media-button.active {
+    color: white;
+}
+
+.nav-media {
+    width: 400px;
+    min-height: 100vh;
+    background-color: red;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: .2s;
+}
+
+.nav-media.active {
+    text-align: left;
+    transform: translateX(0);
+}
+
+.nav-media li {
+    line-height: 35px;
+    text-transform: uppercase;
+}
+
+.nav-media ul {
+    margin-top: 20px;
+    list-style: none;
+    font-size: 1.5rem;
+    margin-left: 30px;
+}
+
+.nav-media ol {
+    list-style: none;
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

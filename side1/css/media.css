@@ -1,0 +1,186 @@
+@media (max-width: 1280px) {
+
+    .first-box-h1,
+    .second-box-h1 {
+        font-size: 3.6vw;
+    }
+
+
+    .typing-box-p {
+        font-size: 1.3vw;
+    }
+
+    .box span {
+        font-size: 2.2vw;
+    }
+
+    .main-content {
+        padding: 50px 205px 50px 95px;
+        line-height: 20px;
+    }
+
+}
+
+@media (max-width: 1045px) {
+
+    .nav-menu,
+    .telephone,
+    .email {
+        display: none;
+    }
+
+    .nav-media-button,
+    .nav-media {
+        display: block;
+    }
+
+    .publisz-box {
+
+        right: -1280px;
+    }
+
+    .publisz {
+        width: 300px;
+    }
+
+    .switch.media {
+        display: block;
+    }
+
+}
+
+@media (max-width: 750px) {
+
+    /*header*/
+    header {
+        height: 700px;
+    }
+
+    .box {
+        width: 100%;
+    }
+
+    .box:nth-child(2) {
+        display: none;
+    }
+
+    .home-slider {
+        width: 80%;
+    }
+
+    .first-box-h1,
+    .second-box-h1 {
+        font-size: 7.5vw;
+    }
+
+    .typing-box-p {
+        font-size: 2.6vw;
+    }
+
+    .home-slider span {
+        font-size: 3vw;
+    }
+
+    .home-slider span::before {
+        width: 4%;
+        margin-top: -15px;
+    }
+
+    /*main*/
+    main {
+        background: rgb(117, 0, 0);
+    }
+
+    .circle {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+        padding: 30px 40px 30px 20px;
+    }
+
+    /*information*/
+
+    .on-information {
+        padding: 0 0 0 20%;
+    }
+
+    .on-information h2 {
+        font-size: 3.5rem;
+        top: -500%;
+        color: rgb(194, 194, 194);
+    }
+
+    .on-information p {
+        font-size: 3.2rem;
+        opacity: 0.8;
+        top: -450%;
+        color: rgb(155, 155, 155);
+
+    }
+
+    .on-information span {
+        font-size: 1.7rem;
+        top: -400%;
+        margin-right: 40%;
+    }
+
+    /*stats*/
+    .statics {
+        min-height: 1200px;
+        padding-top: 40px;
+    }
+
+    .stats-container {
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+    }
+
+    .stats {
+        padding: 30px;
+        width: 75%;
+        margin-top: 10px;
+        font-size: 3.5rem;
+        margin-left: 0;
+
+    }
+
+
+    .stats span {
+        font-size: 2rem;
+    }
+
+
+    .stats.s1,
+    .stats.s2,
+    .stats.s3,
+    .stats.s4,
+    .stats.s5 {
+        height: 180px;
+    }
+
+    /*publications*/
+
+    .publisz-box {
+        right: -1615px;
+    }
+
+    .publisz {
+        width: 300px;
+    }
+
+    .switch.media2 {
+        display: block;
+    }
+
+
+    /*footer*/
+    footer li {
+        float: left;
+        list-style: none;
+        margin-left: 3vw;
+        margin-bottom: 20px;
+    }
+}
