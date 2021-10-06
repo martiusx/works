@@ -25,7 +25,7 @@
     justify-content: center;
     place-items: center;
     position: relative;
-
+    overflow: hidden;
 }
 
 .box-button {
@@ -39,6 +39,7 @@
     position: relative;
     overflow-x: hidden;
     white-space: nowrap;
+    cursor: pointer;
 }
 
 .box {
@@ -152,13 +153,13 @@
 }
 
 .inf-box {
-    width: 30vw;
+    width: 26vw;
     background: white;
     margin-left: 20px;
     border: 10px solid black;
     color: black;
     text-align: center;
-    padding: 15px 25px;
+    padding: 15px 20px;
 }
 
 .inf-box h3 {
@@ -200,6 +201,7 @@
     position: absolute;
     bottom: 50px;
     text-transform: uppercase;
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -226,7 +228,7 @@
     display: flex;
     justify-content: center;
     place-items: center;
-    padding: 20px 40px;
+    padding: 20px 20px;
     font-size: 1.5vw;
     width: 100%;
     border-top: 10px solid black;
