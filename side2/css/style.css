@@ -30,6 +30,8 @@ header {
     display: flex;
     justify-content: center;
     place-items: center;
+    overflow: hidden;
+    position: relative;
 }
 
 .moving-bar {

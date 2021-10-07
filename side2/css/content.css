@@ -1,3 +1,48 @@
+.i-header {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    animation: flow 23s linear infinite;
+    z-index: 0;
+    color: black;
+}
+
+.i-spin-right {
+    animation: i-spin-right 5s linear infinite;
+}
+
+.i-spin-left {
+    animation: i-spin-left 5s linear infinite;
+}
+
+@keyframes i-spin-right {
+    0% {}
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes i-spin-left {
+    0% {}
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes flow {
+    0% {}
+
+    100% {
+        transform: translateY(2000%);
+    }
+}
+
+.title {
+    z-index: 3;
+}
+
 .title h2 {
     font-size: 7vw;
     background: black;
@@ -44,6 +89,7 @@
 
 .box {
     margin: 60px;
+    z-index: 3;
 }
 
 .box-button:hover {
@@ -63,6 +109,27 @@
 .column p {
     font-size: 1.4vw;
     margin-top: 30px;
+}
+
+.finger-box img {
+    width: 450px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    right: -70px;
+    animation: finger .9s infinite alternate;
+}
+
+.finger-box {
+    z-index: 1;
+}
+
+@keyframes finger {
+    0% {}
+
+    100% {
+        transform: scale(1.2) rotate(10deg);
+    }
 }
 
 .in-box {
