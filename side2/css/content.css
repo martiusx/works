@@ -227,6 +227,14 @@
     color: black;
     text-align: center;
     padding: 15px 20px;
+    transform: translateY(100%) rotate(-90deg);
+    opacity: 0;
+    transition: .8s;
+}
+
+.inf-box.active {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
 }
 
 .inf-box h3 {
@@ -279,6 +287,14 @@
 .drop {
     border: 10px solid black;
     margin-left: 20px;
+    transform: translateY(100%) rotate(-90deg);
+    opacity: 0;
+    transition: .8s;
+}
+
+.drop.active {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
 }
 
 .i-box {
