@@ -18,6 +18,7 @@ const addItem = function(){
         createI.style.fontSize = size + 'rem';
         createDiv.style.left = Math.random() * 80 + '%';
         
+
         if(directionNumber < 2){
             createI.classList.add('i-spin-right')
         }
@@ -26,12 +27,11 @@ const addItem = function(){
         }
         
         
-        
         const addDiv = document.querySelector('header').appendChild(createDiv);
 
         setTimeout(() => {
             createDiv.remove();
-        }, 15000)
+        }, 10000)
 }
 
 setInterval(addItem, 500);

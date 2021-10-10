@@ -1,6 +1,7 @@
 
 
 function informationsShow(){
+    
     const scrollPosition = window.scrollY;
     const mainHeight = document.querySelector('main').clientHeight;
     const informationsHeight = document.querySelector('.informations').clientHeight;
@@ -12,7 +13,6 @@ function informationsShow(){
         for(i=0; i<3; i++){
             infBox[i].classList.add('active');
         }
-
     }
     
     if(scrollPosition > mainHeight + informationsHeight + dropsHeight/2){
@@ -20,7 +20,6 @@ function informationsShow(){
             drop[i].classList.add('active');
         }
     }
-    
 }
 
 window.addEventListener('scroll' , informationsShow)

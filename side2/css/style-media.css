@@ -115,10 +115,10 @@
     }
 
     .informations button {
+        position: absolute;
         white-space: nowrap;
         width: 45vw;
         font-size: 5vw;
-        position: absolute;
         bottom: 20px;
         left: calc(50% - 40vw/2);
         display: flex;
