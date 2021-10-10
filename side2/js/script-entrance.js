@@ -19,7 +19,6 @@ function informationsShow(){
         for(i=0; i<3; i++){
             drop[i].classList.add('active');
         }
-
     }
     
 }

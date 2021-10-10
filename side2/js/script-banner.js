@@ -10,7 +10,6 @@ const addItem = function(){
         let size = Math.random() * 30 + 15; 
         let directionNumber = Math.random() * 2 + 1;
         
-        
         createDiv.appendChild(createI);
         createDiv.classList.add('i-header');
         createI.classList.add('fab');

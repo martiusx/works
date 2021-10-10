@@ -336,9 +336,9 @@
 }
 
 footer li {
+    margin-left: 20px;
     float: left;
     list-style: none;
-    margin-left: 20px;
 }
 
 footer li:hover {
