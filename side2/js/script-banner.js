@@ -15,7 +15,6 @@ const addItem = function(){
         createI.classList.add('fab');
         createI.classList.add(fontTypeList[fontType]);
                 
-      
         createI.style.fontSize = size + 'rem';
         createDiv.style.left = Math.random() * 80 + '%';
         
