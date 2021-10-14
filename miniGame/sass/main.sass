@@ -102,7 +102,7 @@ body
             overflow: hidden
             transform: rotateY(180deg) translateX(-200%)
             position: absolute
-            right: 0
+            left: 100%
 
             img
                 animation: walk 1s steps(8) infinite
@@ -120,8 +120,8 @@ body
                     transform: translateX(-1650%) rotateY(180deg)
 
             .hitbox-head
-                width: 50px
-                height: 45px
+                width: 55px
+                height: 50px
                 border-radius: 50%
                 background:
                 position: absolute
@@ -130,7 +130,7 @@ body
                 z-index: 1
                 cursor: pointer
             .hitbox-body
-                width: 70px
+                width: 90px
                 height: 100px
                 background:
                 position: absolute
@@ -138,3 +138,9 @@ body
                 top: 45px
                 z-index: 1
                 cursor: pointer
+    .score
+        background: black
+        position: absolute
+        right: 0
+        top: 0
+        color: white
