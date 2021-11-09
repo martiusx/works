@@ -9,6 +9,7 @@
     --block-height: 5.5vw;
     --block-distance: 1vw;
     --block-bottom: -7vw;
+    --shadow-window: rgba(0, 0, 0, 0.137);
 }
 
 body {
@@ -36,13 +37,131 @@ body {
     z-index: 10;
 }
 
+.windows {
+    position: absolute;
+    bottom: -8vw;
+    right: 0vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.windows.two {
+    bottom: 10vw;
+}
+
+.window.two::after {
+    content: '';
+    width: 100%;
+    height: 1vw;
+    background: rgb(160, 160, 101);
+    position: absolute;
+    border-radius: 1vw 1vw 0 0;
+    bottom: 3.22vw;
+    right: 0%;
+}
+
+.windows.four {
+    bottom: 8vw;
+    right: 2vw;
+}
+
+.windows.six {
+    bottom: 9vw;
+    right: -1vw;
+}
+
+.window.six:after {
+    content: '';
+    background: dimgrey;
+    width: .25vw;
+    height: 3.1vw;
+    position: absolute;
+    bottom: 0;
+    right: calc(50% - .25vw/2);
+}
+
+.windows.sevenBR {
+    bottom: 4vw;
+}
+
+.windows.sevenBL {
+    bottom: 4vw;
+    right: 17vw;
+}
+
+.windows.sevenTR {
+    bottom: 9.5vw;
+    right: 4vwvw;
+}
+
+.windows.sevenTL {
+    bottom: 9.5vw;
+    right: 17vw;
+}
+
+.windows.eight {
+    bottom: 14.5vw;
+    right: 0vw;
+
+}
+
+.window.eight {
+    border: none;
+    box-shadow: none;
+    height: 3.5vw;
+    width: 1.7vw;
+    margin-right: 1.5vw;
+}
+
+.windows.eight.B {
+    bottom: 9vw
+}
+
+.window.eight:before {
+    display: none;
+}
+
+.windows.ten {
+    bottom: 5vw;
+    right: 3vw;
+}
+
+.windows.eleven {
+    bottom: 2vw;
+}
+
+
+
+.window {
+    position: relative;
+    margin-right: 2vw;
+    background: rgb(160, 160, 101);
+    width: 2.2vw;
+    height: 1.5vw;
+    border-bottom: solid black;
+    box-shadow: 0 -1.7vw 0 0 rgb(160, 160, 101);
+}
+
+
+.window:before {
+    content: '';
+    position: absolute;
+    width: 2.6vw;
+    background: black;
+    height: .5vw;
+    right: -0.2vw;
+    bottom: -.5vw;
+    box-shadow: 0 .5vw 0 0 var(--shadow-window);
+}
+
 .block.two {
     width: calc(var(--block-width) * 1.9);
     height: calc(var(--block-height) * 3);
     right: calc(var(--block-distance) * 30);
     z-index: 9;
-
 }
+
 
 .block.three {
     right: calc(var(--block-distance) * 43);
@@ -74,7 +193,7 @@ body {
     right: calc(var(--block-distance) * 38);
     height: calc(var(--block-height) * 2.6);
     width: calc(var(--block-width) * 3.7);
-    z-index: 6;
+    z-index: 5;
     bottom: 8vw;
 }
 
@@ -157,6 +276,24 @@ body {
     height: calc(var(--block-width) * .8);
     background: silver;
     transform: skewX(-45deg);
+}
+
+.wall {
+    width: 30vw;
+    height: 17vw;
+    right: 15vw;
+    bottom: 5vw;
+    z-index: 5;
+    transform: perspective(100px) translateZ(-155px);
+}
+
+.block.wall:before {
+    width: calc(var(--block-width) * .2);
+    ;
+}
+
+.block.wall:after {
+    height: calc(var(--block-width) * .2);
 }
 
 .streat {
@@ -270,11 +407,24 @@ body {
 .score {
     position: absolute;
     z-index: 150;
-    width: 5vw;
-    height: 3vw;
-    background: white;
-    bottom: 15vw;
+    background: black;
+    color: white;
+    width: 8vw;
+    height: 3.5vw;
+    bottom: 18vw;
     right: 7vw;
+    font-size: 2vw;
+}
+
+.score:before {
+    content: '';
+    position: absolute;
+    width: .4vw;
+    height: 1.5vw;
+    bottom: -1.5vw;
+    background: black;
+    box-shadow: 4.6vw 0 0 0 black;
+    right: 6vw;
 }
 
 .target {
@@ -307,4 +457,42 @@ img {
     100% {
         transform: translateX(-2100%) rotateY(180deg)
     }
+}
+
+.restart {
+    width: 10vw;
+    height: 4vw;
+    right: 1.5vw;
+    bottom: 17.5vw;
+    z-index: 5;
+    text-align: center;
+    font-size: 2vw;
+    line-height: 3.5vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.restart:hover {
+    color: goldenrod;
+    background: rgb(83, 84, 85);
+}
+
+.restart-supports {
+    position: absolute;
+    width: .5vw;
+    height: 1.5vw;
+    background: black;
+    right: 8vw;
+    bottom: -1.5vw;
+    box-shadow: 6.5vw 0 0 0 black;
+}
+
+.block.restart:before {
+    width: calc(var(--block-width) * .07);
+    ;
+}
+
+.block.restart:after {
+    height: calc(var(--block-width) * .07);
 }
