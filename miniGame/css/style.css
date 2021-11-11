@@ -17,6 +17,7 @@ body {
     height: 100vh;
     background: gray;
     overflow: hidden;
+    font-family: 'Road Rage', cursive;
 }
 
 .bottom-block-line {
@@ -128,7 +129,7 @@ body {
 }
 
 .windows.eleven {
-    bottom: 2vw;
+    bottom: 5vw;
 }
 
 
@@ -413,7 +414,10 @@ body {
     height: 3.5vw;
     bottom: 18vw;
     right: 7vw;
-    font-size: 2vw;
+    font-size: 1.5vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
 }
 
 .score:before {
@@ -495,4 +499,52 @@ img {
 
 .block.restart:after {
     height: calc(var(--block-width) * .07);
+}
+
+.alert {
+    background-image: url(images/ekran.png);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 150;
+    width: 9vw;
+    height: 5vw;
+    transition: .3s;
+    color: black;
+    font-size: 1.5vw;
+    right: 9vw;
+    bottom: 8vw;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+
+.alert p {
+    animation: HeadshotAlert .6s linear forwards;
+    position: absolute;
+}
+
+@keyframes HeadshotAlert {
+    0% {
+        transform: scale(0);
+    }
+
+    25% {
+        transform: scale(1);
+
+    }
+
+    50% {
+        transform: scale(.7);
+
+    }
+
+    75% {
+        transform: scale(1);
+
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }

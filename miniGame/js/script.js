@@ -5,6 +5,8 @@
    //mnimum speed of targets
    let minSpeed = 4.5;
 
+
+
    function game(){
        //create elements
        const hitboxHead = document.createElement('div');
@@ -39,7 +41,7 @@
        })
 
        //score table
-       document.querySelector('.score').textContent = score;
+       document.querySelector('.score').textContent = 'score:' + score;
        
        //adding the target to the road
        road[roadNumber].appendChild(div);
@@ -52,20 +54,41 @@
        //click place
        $(hitboxBody).on('click', function() {
        div.remove();
-       score+= 100
+       score+= 25;
+       const bodyshotAlertDiv = document.createElement('p');
+        bodyshotAlertDiv.textContent = 'BODY';
+        document.querySelector('.alert').appendChild(bodyshotAlertDiv);
+
+        setTimeout(()=>{
+            bodyshotAlertDiv.remove();
+        }, 2000);
+
        })
 
        $(hitboxHead).on('click', function() {
        div.remove();
-       score+= 250
+       score+= 50;
+        //headshotsAlert
+
+        const headshotAlertDiv = document.createElement('p');
+        headshotAlertDiv.textContent = 'HEADSHOT';
+        document.querySelector('.alert').appendChild(headshotAlertDiv);
+
+        setTimeout(()=>{
+            headshotAlertDiv.remove();
+        }, 2000);
+
 
    })
+       
 
    //restart
    $('.restart').on('click', ()=>{
        score = 0;
        div.remove();
    })
+
+   
 }
 
 setInterval(game, createSpeed);
