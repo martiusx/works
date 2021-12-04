@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red-color: #be2d2a;
+    --margin-slider: -29vw;
+    font-size: 1vw;
+}
+
+.middle {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+    overflow-x: hidden;
+    font-family: Coluna;
+    color: white;
+}
+
+.side {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+
+}
+
+.baner {
+    position: relative;
+    height: 50vw;
+}
+
+
+.baner img {
+    right: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+
+h1 {
+    font-size: 8rem;
+    width: 100%;
+}
+
+h1 span {
+    font-size: 5rem;
+    position: relative;
+    z-index: 1;
+    padding: .3vw;
+}
+
+h1 span::before {
+    content: '';
+    position: absolute;
+    background: var(--red-color);
+    width: 100%;
+    height: 65%;
+    z-index: -1;
+    margin-bottom: 25%;
+}
+
+p {
+    width: 100%;
+    position: relative;
+    padding: 0 25px;
+    font-size: 25px;
+}
+
+.netflix-logo-box {
+    width: 100%;
+    height: 4vw;
+    background: black;
+}
+
+.netflix-logo-box img {
+    height: 100%;
+    width: auto;
+}
+
+.LaCasa-logo {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 1;
+}
+
+.LaCasa-logo img {
+    height: 100%;
+}
+
+button {
+    font-family: Electrolize;
+    padding: 5px 5px;
+    border: none;
+    background: var(--red-color);
+    color: white;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+button i {
+    margin-right: 2px;
+    font-size: 140%;
+}
+
+.social-media {
+    position: absolute;
+    width: 15vw;
+    height: 5vw;
+    left: 0;
+    font-size: 3vw;
+    color: red;
+    bottom: 0;
+}
+
+.social-media i {
+    margin-left: 15px;
+}
+
+.videos-slider {
+    position: absolute;
+    height: 15vw;
+    width: 56vw;
+    bottom: 10%;
+    right: 0%;
+    overflow: hidden;
+
+}
+
+.slides {
+    position: absolute;
+    display: flex;
+    height: 100%;
+    left: 0;
+}
+
+.slide {
+    width: 25vw;
+    height: 100%;
+    margin-left: 4vw;
+    transition: .5s;
+}
+
+.slide img {
+    position: absolute;
+    height: 100%;
+}
+
+.switches {
+    position: absolute;
+    bottom: 5%;
+    display: flex;
+    right: 24%;
+}
+
+.switch {
+    width: 2vw;
+    height: 1vw;
+    background: red;
+    border: 1.5px solid white;
+    margin-left: 10px;
+}
+
+#s1:checked~.r1 {
+    margin-left: 0vw;
+}
+
+#s2:checked~.r1 {
+    margin-left: var(--margin-slider);
+}
+
+#s3:checked~.r1 {
+    margin-left: calc(var(--margin-slider)*2);
+}
+
+input {
+    opacity: 0;
+    display: none;
+}
+
+a {
+    color: red;
+    text-decoration: none;
+}
+
+@media (max-width: 550px) {
+
+    :root {
+        font-size: 2.5vw;
+        --margin-slider: -41vw;
+    }
+
+    header {
+        position: absolute;
+        grid-template-columns: 100%;
+        top: 0%;
+        transform: none;
+    }
+
+    .information-block {
+        height: 120vw;
+    }
+
+    button {
+        font-size: 8vw;
+    }
+
+    .videos-slider {
+        height: 22vw;
+        width: 80vw;
+        left: calc(50% - 80vw/2);
+        top: 165vw;
+    }
+
+    .slide {
+        margin-left: 16vw;
+    }
+
+    .switches {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 190vw;
+    }
+
+    .switch {
+        width: 8vw;
+        height: 2.5vw;
+    }
+
+
+    .LaCasa-logo {
+        height: 15vw;
+        left: 5%;
+    }
+
+    .netflix-logo-box {
+        height: 10vw;
+    }
+
+    .social-media {
+        position: absolute;
+        width: 40vw;
+        left: 0;
+        font-size: 10vw;
+        color: red;
+        top: 200vw;
+    }
+}
