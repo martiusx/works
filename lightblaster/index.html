@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dc643cc88b.js" crossorigin="anonymous"></script>
+    <title>ligtblaster</title>
+    <style>
+        :root {
+        --blade-hue: 10;
+        --blade-lightness: 50%;
+        }
+        body{
+            background: rgb(37, 36, 36);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            overflow: hidden;
+        }
+        .wrapper{
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .sword-hilt{
+            width: 18px;
+            height: 120px;
+            display: block;
+            background: rgb(187, 179, 179);
+            border-radius: 20%;
+            cursor: pointer;
+            position: absolute;
+            background-image: linear-gradient(rgb(187, 179, 179) 0 10px,
+            hsl(39 75% 50%) 0 17px,
+            rgb(187, 179, 179) 0 18px,
+            black 0 23px,
+            rgb(187, 179, 179) 0 25px,
+            black 0 28px,
+            rgb(187, 179, 179) 0 30px,
+            black 0 33px,
+            rgb(187, 179, 179) 0 35px,
+            black 0 38px,
+            rgb(187, 179, 179) 0 40px,
+            black 0 43px,
+            rgb(187, 179, 179) 0 45px,
+            black 0 48px,
+            rgb(187, 179, 179) 0 50px,
+            black 0 53px,
+            rgb(187, 179, 179) 0 100%);
+        }
+
+        .blade {
+            position: absolute;
+            background: white;
+            height: 400px;
+            width: 13px;
+            bottom: 0;
+            border-radius: 100vw 100vw 0 0;
+            box-shadow: inset 0 0 4px hsl(var(--blade-hue) 100% var(--blade-lightness) / 1),
+            0 0 1em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.8),
+            0 0 1.5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.7),
+            0 0 2em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.5),
+            0 0 3em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.3),
+            0 0 5em hsl(var(--blade-hue) 100% var(--blade-lightness) / 0.2);
+
+            transition: transform 50ms ease-out;
+            transform-origin: bottom;
+        }
+        .blade::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: hsl(var(--blade-hue) 100% var(--blade-lightness));
+            border-radius: inherit;
+            filter: blur(0.5em);
+            opacity: 1;
+            animation: pulse linear 1s infinite;
+        }
+
+        @keyframes pulse {
+        50% {
+            opacity: 50%;
+        }
+}
+
+        .blade::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: white;
+            border-radius: inherit;
+            z-index: 10;
+        }
+
+        #on-off:not(:checked)+.blade {
+            transform: scaleY(0);
+        }
+
+        #on-off:checked+.blade {
+            transform: scaleY(1);
+        }
+        input{
+            opacity: 0;
+        }
+
+        .switch{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: blue;
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 10px/2);
+            display: flex;
+            justify-content: center;
+            place-items: center;
+        }
+        .switch i {
+           transform: scale(0.5);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <input type="checkbox" id="on-off">
+        <div class="blade"></div>
+        <label class="sword-hilt" for="on-off">
+            <div class="switch">
+                <i class="fas fa-power-off"></i></div>
+        </label>
+      </div>
+</body>
+</html>
