@@ -1,0 +1,45 @@
+// xs - max-width: 575px,
+// sm - min-width: 576px,
+// md - min-width: 768px,
+// lg - min-width: 992px,
+// xl - min-width: 1200px,
+// hd - min-width: 1600px
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  @media screen and (min-width: $containerWidth) {
+    width: $containerWidth;
+  }
+}
+
+[class*="col"] {
+  width: 100%;
+
+  @for $i from 1 through $columns {
+    .col-#{$i} {
+      width: math.div(100%, $columns) * $i;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+
+  @for $i from 1 through $columns {
+    @for $n from 1 through $BreakPoints {
+      $number: $n;
+
+      $screenSize: list.nth($gridRWDList, $number);
+      $colName: list.nth($BreakPointsType, $number);
+
+      .col-#{$colName}-#{$i} {
+        @media screen and (min-width: $screenSize) {
+          width: math.div(100%, $columns) * $i;
+          padding: 0 math.div($gutter, 2);
+        }
+      }
+    }
+  }
+}
